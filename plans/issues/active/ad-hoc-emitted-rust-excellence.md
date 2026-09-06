@@ -49,7 +49,7 @@ Execution order: **12K-B10, 12K-B11**, then an explicit delivery authorization
 checkpoint. After valid12K delivery, retain 12D,12E,12F,retained Item12,docs-only12A.
 One live implementer; parent does not implement, test, review or run Sifr gates.
 
-- **12K-B10 / [#3731](https://github.com/sifr-lang/sifr/issues/3731)**: in progress;
+- **12K-B10 / [#3731](https://github.com/sifr-lang/sifr/issues/3731)**: merged;
   depends on terminal original12K evidence, not unmerged integration delivery.
   Reconcile ERQ-032's stale current-source semantic anchor with its actual owning
   implementation, preserving audit disposition and meaningful stale-anchor
@@ -127,12 +127,45 @@ or new regression command is needed. After implementation, run exactly:
 - `git diff --check`
 - `python3 scripts/check_file_size_guardrails.py`
 
-Validation and the single initial exact-SHA Opus review are pending. No prior
-B10 reviews, retries or gates exist. The user's file-category exception applies:
-audit JSON and phase Markdown require no create-pr or merge-profile gate.
-Original12K remains unmerged with two failed gates and no third allowance.
-B11 and all later implementation remain untouched. Stop after B10's normal
-merge and owner/phase closure record.
+Completed through [PR #3733](https://github.com/sifr-lang/sifr/pull/3733).
+Exact candidate `4147d9235462178e870342abf2a390ac5ab3f890`, base
+`fc9dbf04727577e93dec397b3570d7cfe4af33d0`, normal merge
+`66363d81c8bc5256988b4cfea5d3b95b65c5caa2` (2026-09-06 22:52:40 UTC).
+The remote merge parents contain that exact base and candidate. Owner #3731
+is closed. This post-merge record is pushed on the owned B10 branch; the next
+authorized owner must carry this closure receipt into its own phase record.
+
+All four named checks pass on the candidate: inventory33 (29 actionable,
+4 rejected), inventory self-test including stale-text/uncovered-anchor
+rejection, base-to-candidate diff check, and file-size3757 (limit900).
+The first inventory and self-test executions failed because the fresh clone
+lacked the existing LeetCode submodule (ERQ-008 expected20/actual0). Materialized
+the exact main gitlink `ad116aa8dcae51b7db1bdf0052470456d671d31b` without
+tracked changes, then reran only those two affected checks successfully.
+Both setup failures remain retained; six candidate-check executions total.
+No compiler/runtime/checker/fixture/lockfile/workflow/gitlink changes occurred.
+
+[Published validation/review evidence](https://github.com/sifr-lang/sifr/pull/3733#issuecomment-5562746452)
+is outside the reviewed tree and keyed by the exact candidate. Local evidence:
+`/private/tmp/sifr-item12k-b10.LrJOME/evidence/4147d9235462178e870342abf2a390ac5ab3f890/`.
+`validation.json` SHA256
+`6f1213d6174b2d165977f3fe795ed8bcbe2d3d474ac94bfdfc21388aa1b39c5e`
+records every command, exit status and log digest, including both setup failures.
+`opus-review.md` SHA256
+`7299f770a512c7a2c3f8b848fd24cbf764523c4b643afa620c090f9a0a003a81`.
+Opus verdict SATISFIED, no blockers. Counters: one initial review, zero
+remediation, one provider request, zero retries, zero create-pr gates, zero
+merge-profile gates, one normal merge. The user's audit-JSON/docs gate
+exception applies. No new review or broad validation for this record update.
+
+Two nonblocking review observations (title precision and formatting-sensitive
+anchor maintenance) are separate optional later work in
+[#3734](https://github.com/sifr-lang/sifr/issues/3734), with no newly established
+mechanism defect or delivery dependency. B10 blocker: none. All test/review
+handles completed; parent/predecessor checkouts remained read-only.
+Original12K remains approved but unmerged with two failed gates and no third
+allowance; full E2E, migrated stdlib and ignored driver builds remain unreached.
+B11 and all later implementation remain untouched. B10 is complete: stop here.
 
 ## Current orchestration: 12K blocked; bounded tooling owners (2026-09-06)
 
