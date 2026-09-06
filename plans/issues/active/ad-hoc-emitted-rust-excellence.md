@@ -2,6 +2,112 @@
 
 Status: active
 
+## Original12K replacement terminal: approved, blocked, not merged (2026-09-07)
+
+This is the authoritative current receipt. It supersedes pending authorization,
+unused-review/gate allowances, and stale B7/B8/B9 status tables below without
+erasing their historical evidence. The user's explicit replacement authorization
+was consumed exactly once. **Both cumulative reviews and both integration gates
+are now consumed; no third review or gate.** No later item was implemented.
+
+Exact reviewed/gated candidate `822987be25dd99a1e98d0bf380c3355504a96f61`, assessed
+and fetched main `fc9dbf04727577e93dec397b3570d7cfe4af33d0`, corpus
+`8bcbe7ab7939e5c8362c10f61a80e368022cc372`. The owned fresh independent clone is
+`/private/tmp/sifr-item12k-replacement.1xatjh/sifr`, branch
+`codex/item12k-replacement-delivery`; existing remote PR branch remains
+`codex/item12k-final-integration`. Normal ancestry from retained full integration
+record `057dd2e2caf1f84306b370cee2c3be39918cbec3` and merged B7/B8/B9 is preserved;
+excluded retained Item12 commit `8ad089a9458f35fcfa228e93fe44f4d69731828b` is not
+an ancestor. All 16 independent submodules retain their exact approved gitlinks.
+Only the actual phase-record integration conflict was resolved; no production
+repair, compiler/lockfile/fixture/runner rewrite, or new mechanism was introduced.
+The candidate has 202 changed paths against main, 32089 complete tracked entries,
+and eight changed paths against the original approved candidate. Its five
+non-record delta paths are byte-identical to independently approved main inputs.
+
+The six registered prechecks passed: stdlib-manifest schema, file-size (3781
+files, limit900), exact-base diff, TypeScript-Go guard, compatibility guard and
+formatter-reference guard. The diff command used frozen base SHA `fc9dbf047...`
+instead of its verified equivalent `origin/main`; no scope difference.
+The sole remaining [remediation review](https://github.com/sifr-lang/sifr/pull/3717#issuecomment-5562251011)
+is **SATISFIED, no blockers**, scoped to the original approval plus exact changed
+dependency inputs. Completed response SHA256
+`138fcf9b801a774722bff3dd900d4a62e939a65c6e004196079b8df115092fe5`.
+Readiness evidence from the old candidate remains historical because B8 added a
+scanned Python test file; the replacement gate actually passed current readiness4.
+No inherited evidence is relabeled as fresh execution on this SHA.
+
+### Replacement gate result and qualification boundary
+
+`scripts/run_all_tests.sh --profile merge` completed **FAILED**, exit1 after
+4376.64s (profile measured4373.85s). All13 guardrails passed, including file-size,
+full demo freshness and manifest schema. Actual current area results:
+Rust10, readiness4, core5, CPython2, complete Python30 including all five named
+dependency suites, diagnostics184, runtime30 with three explicit policy skips,
+algorithmic12, and developer-tooling42 all have zero failures. B7/B8/B9's three
+former blockers now actually pass in this gate. Generated-quality completed all
+nine variants: panic-scan, intrinsic-panic-lint, rustfmt, determinism and freshness
+passed; inventory, corpus, positive Clippy and demos failed. The four failures
+belong to two later owners, recorded only and not started:
+
+- **12K-B10 / [#3731](https://github.com/sifr-lang/sifr/issues/3731)**:
+  `ERQ-032.semantic_anchor` is absent from current `methods/list.rs`. Audit
+  inventory and implementation blobs match assessed main. This repeats the
+  existing “Naming cleanup validation findings (2026-09-05)” anchor finding,
+  not a newly established list-codegen mechanism defect. Later owner must
+  reconcile the semantic anchor without suppressing meaningful enforcement.
+- **12K-B11 / [#3732](https://github.com/sifr-lang/sifr/issues/3732)**: generated
+  corpus, positive Clippy and demo Cargo commands cannot materialize exact-rev
+  `sifr_runtime` at `822987be...` under enforced offline mode. Workspace locked
+  fetch passed; the generated self-Git graph is not in that root lockfile.
+  Preparation coverage is a bounded inference for later diagnosis, not proof
+  of emitted Rust or lint failure. Preserve portable exact Git dependencies,
+  offline policy and full coverage; no cache/path workaround was applied.
+
+Full E2E, migrated stdlib, normally ignored driver builds
+(`cargo test -p sifr_driver --lib -- --ignored --test-threads=1`), and all later
+profile stages were **UNREACHED**, not passes or partial certification. The
+cold-cache wall-time advisory is not host-sensitive performance evidence.
+Original attempt1 remains FAILED3736.19s; attempt2 remains FAILED4376.64s.
+Cumulative counts: **1 initial review, 1 remediation, 2 provider requests,
+0 retries, 0 create-pr gates, 2 failed merge gates, 0 passing gates,
+0 Sifr integration merges, 0 corpus merges**. Gate session11171 and qualifier88485,
+profile89101 and generated-quality descendants have terminated; no live review
+or gate handles remain. No source repairs or third attempt occurred.
+
+### Preserved evidence and delivery disposition
+
+Canonical JSON is under the owned checkout's `target/verification/areas`:
+
+- `item12k-replacement-final-evidence.json`, SHA256
+  `604bdec9161a70b23293f17d3f99916e70c16b02fd68546667407c3254c43c61`:
+  authenticates 60 current plus 178 retained artifacts, full tree/gitlinks,
+  exact-input reuse, checks, review, all current area results and failures.
+- `item12k-replacement-provenance.json`, SHA256
+  `fd1fb8dac7fa0e39cad0625d2a3a421073e40ae88f5b16600ead905274108a06`.
+- `item12k-replacement-merge.json`, SHA256
+  `a44e58d6a8419f7b611329a36e2e971853dfc935e09e8509bd9c107abf941ce7`.
+- `generated-code-quality-merge-results.json`, SHA256
+  `33da0aeed33750f546cf7922114ad34104d83bddcf0135a0dbf48696c4769d87`.
+- `target/validation_lane_reports/merge.latest.json` (relative to checkout), SHA256
+  `1da3ba3d541c85ae11bc0ce98700b6e476b804fa59b17e58673d8de057086e9d`.
+- Complete sibling `evidence/merge.log`, SHA256
+  `bfa20fcd65ddb34a8d91ece1abad51bfac7c228007668f56c2985f3b4acd4b65`.
+
+[Sifr PR3717](https://github.com/sifr-lang/sifr/pull/3717) and exact
+[corpus PR48](https://github.com/sifr-lang/leetcode/pull/48) remain draft/unmerged.
+No integration-dependent PR/owner is closed as delivered; a prior stacked-base
+merge does not imply main delivery. B7/PR3725, B8/PR3727 and B9/PR3729 were already
+normally merged to main; owners3722/3723/3724 are closed and their carried closure
+receipts below remain authoritative over stale historical tables. Historical
+12J/R1 NOT SATISFIED remains distinct from correcting M1 approval; M1-F3 is not
+closed. Optional3726/3728/3730 and next items12D/E/F, Item12 and12A are untouched.
+Parent's two dirty Markdown files, branch/index/tree and all predecessor caches
+were preserved read-only. Post-gate changes are phase/owner Markdown records
+only; their record SHA and terminal ledger are published on PR3717. This worker
+stops with blockers3731/3732, without claiming item closure or requesting a
+silent allowance reset.
+
 ## Original12K replacement continuation ownership (2026-09-06)
 
 Sole current implementer owns `/private/tmp/sifr-item12k-replacement.1xatjh/sifr`,

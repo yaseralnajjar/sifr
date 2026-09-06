@@ -2,6 +2,35 @@
 
 Status: active; fresh sequential dependency workers authorized on 2026-09-05.
 
+## Original12K replacement terminal: Python passed, integration blocked (2026-09-07)
+
+Current receipt supersedes the pending/original-only counts below while retaining
+their history. Exact candidate `822987be25dd99a1e98d0bf380c3355504a96f61` received
+the sole remaining [SATISFIED remediation review](https://github.com/sifr-lang/sifr/pull/3717#issuecomment-5562251011).
+The expressly authorized second integration gate completed FAILED, exit1 after
+4376.64s. Complete Python interop actually passed30/30, including all five named
+dependency suites, on this SHA. Canonical report under
+`/private/tmp/sifr-item12k-replacement.1xatjh/sifr/target/verification/areas/python-interop-merge-results.json`,
+SHA256 `fbcda16499389ffdb00118a2a263cfac4946a37e2efef94667cf5360474189d9`.
+
+Developer-tooling42 now passes after independently merged B7/B8/B9. The gate
+instead stopped after all nine generated-quality variants completed: stale
+ERQ-032 anchor [12K-B10/#3731](https://github.com/sifr-lang/sifr/issues/3731), and
+offline exact-revision generated Cargo dependencies
+[12K-B11/#3732](https://github.com/sifr-lang/sifr/issues/3732), block integration.
+Both are later records only; neither was implemented. Full E2E, migrated stdlib
+and ignored driver builds remain UNREACHED; M1-F3 is not closed. No Python
+fallback, weakened constructor-message contract or partial certification occurred.
+
+Final evidence `target/verification/areas/item12k-replacement-final-evidence.json`,
+SHA256 `604bdec9161a70b23293f17d3f99916e70c16b02fd68546667407c3254c43c61`,
+authenticates60 current and178 retained artifacts. Counts:1initial/1remediation,
+2provider/0retry,2FAILED merge gates/0passing/0create-pr,0Sifr/corpus merges.
+No live gate/review handles; no third review/gate. PR3717/corpus48 remain draft
+and unmerged. Parent/predecessor trees were read-only. Historical12J/R1 failures
+remain distinct from correcting M1 approval. See the emitted-Rust phase's top
+terminal receipt for complete results, provenance, ownership and handoff.
+
 ## Original 12K approved integration, failed external gate (2026-09-06)
 
 Current receipt supersedes earlier pending Python qualification statements.
