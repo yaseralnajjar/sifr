@@ -49,7 +49,7 @@ Execution order: **12K-B10, 12K-B11**, then an explicit delivery authorization
 checkpoint. After valid12K delivery, retain 12D,12E,12F,retained Item12,docs-only12A.
 One live implementer; parent does not implement, test, review or run Sifr gates.
 
-- **12K-B10 / [#3731](https://github.com/sifr-lang/sifr/issues/3731)**: in progress;
+- **12K-B10 / [#3731](https://github.com/sifr-lang/sifr/issues/3731)**: merged;
   depends on terminal original12K evidence, not unmerged integration delivery.
   Reconcile ERQ-032's stale current-source semantic anchor with its actual owning
   implementation, preserving audit disposition and meaningful stale-anchor
@@ -64,7 +64,7 @@ One live implementer; parent does not implement, test, review or run Sifr gates.
   checker/tests only if necessary for this bounded mechanism. One exact-SHA
   Opus review plus at most one remediation. No Sifr gates absent compiler,
   lockfile, fixture or workflow changes. Merge and update owner/phase, then stop.
-- **12K-B11 / [#3732](https://github.com/sifr-lang/sifr/issues/3732)**: queued;
+- **12K-B11 / [#3732](https://github.com/sifr-lang/sifr/issues/3732)**: in progress;
   execution dependency B10 merged/terminal. Diagnose and fully correct preparation
   of the actual exact-revision generated Cargo dependency graph before enforced
   offline qualification. Workspace locked fetch alone did not populate the
@@ -76,6 +76,89 @@ One live implementer; parent does not implement, test, review or run Sifr gates.
   before executing them, plus diff/file-size checks. Do not rerun original12K's
   gate or reset its reviews. Read issue3732 and preserved terminal evidence before
   selecting this owner's exact implementation/validation paths.
+
+12K-B10 Lagrange (`01a078e3-a9cc-7da0-8cc4-9b76af3a6760`) is closed after
+verified [PR3733 merge](https://github.com/sifr-lang/sifr/pull/3733), candidate
+`4147d9235462178e870342abf2a390ac5ab3f890`, basefc9dbf047, normal main merge
+`66363d81c8bc5256988b4cfea5d3b95b65c5caa2`. Owner3731 CLOSED. All four named
+checks pass (33 findings/29 actionable/4 rejected; file-size3757). Two missing
+submodule setup failures retained; only affected inventory commands reran after
+materializing existing pinned corpus `ad116aa8dcae51b7db1bdf0052470456d671d31b`.
+One initial SATISFIED review, zero remediation/retry/gates, one provider request,
+one normal merge. Two paths only: ERQ-032 audit JSON and phase Markdown.
+[Review/validation](https://github.com/sifr-lang/sifr/pull/3733#issuecomment-5562746452),
+[terminal receipt](https://github.com/sifr-lang/sifr/pull/3733#issuecomment-5562761993).
+Preserved clean clone `/private/tmp/sifr-item12k-b10.LrJOME/sifr`, post-merge record
+`fb92a15cea2b3e3cbe3c1b3826caecc9557feea2` pushed on
+`codex/item12k-b10-audit-anchor`, not main; next worker carries closure receipt.
+Sibling `evidence/terminal.json` SHA256
+`42daa70ed47efb8802b91353fdb88bed08c74ca49843b9245617126bf765b007`;
+candidate validation SHA256
+`6f1213d6174b2d165977f3fe795ed8bcbe2d3d474ac94bfdfc21388aa1b39c5e`;
+review SHA256 `7299f770a512c7a2c3f8b848fd24cbf764523c4b643afa620c090f9a0a003a81`.
+No live handles. Optional title/anchor-maintenance suggestions are later3734,
+not an established new mechanism defect or automatic delivery dependency.
+
+B11 named runner validation additionally includes the documented
+`uv run --project verification python -m sifr_verify --self-test`,
+`git diff --check`, and `python3 scripts/check_file_size_guardrails.py`.
+Register exact focused clean-cache positive/negative commands after read-only
+diagnosis and before execution. Exercise production preparation before enforced
+offline materialization of the actual exact-revision generated graph, including
+runtime and stdlib demand and relevant corpus/positive-Clippy/demo entry modes;
+do not substitute manual cache prewarming for that production path. Preserve
+workspace setup, immutable revision identity, lock enforcement, offline execution
+and fail-closed preparation. Candidate must be pushed if remote exact-revision
+resolution requires it. No parent implementation or original12K gate is authorized.
+
+### 12K-B11 implementation and focused validation registration (2026-09-07)
+
+Owned clone `/private/tmp/sifr-item12k-b11.sasFlU/sifr`, branch
+`codex/item12k-b11-offline-preparation`, base
+`66363d81c8bc5256988b4cfea5d3b95b65c5caa2`. Actual main was fetched with
+`+refs/heads/main:refs/remotes/origin/main`. Parent and predecessor trees,
+indexes, caches and records are read-only.
+
+Diagnosis: the root lock resolves workspace path packages, whereas actual
+portable generated manifests and locks identify runtime/stdlib by self-Git
+URL plus exact SHA. Root-only fetch cannot populate that separate source.
+The profile prelude now builds/materializes after workspace preparation,
+fetches each complete positive-manifest graph with `--locked`, rejects stale
+revision/local-source graphs, and verifies immutable manifest/lock bytes.
+Execution uses a revision-scoped materialization root and remains offline;
+corpus/demo Cargo check and positive Clippy explicitly enforce `--locked`.
+Full/companion selections also prepare their authoritative companion graphs.
+No compiler, tracked lockfile, fixture, workflow or manifest changes.
+
+Exact commands registered BEFORE test execution:
+
+- `uv run --project verification python -m sifr_verify.generated_cargo_setup_checks policy`
+- `uv run --project verification python -m sifr_verify --self-test`
+- `uv run --project verification python -m sifr_verify.generated_cargo_setup_checks clean-cache`
+- `git diff --check`
+- `python3 scripts/check_file_size_guardrails.py`
+
+The clean-cache command creates a new owned empty Cargo home, invokes the
+production profile preparation, then performs locked/offline Cargo metadata
+resolution for every actual prepared generated graph. It re-enters the shared
+materialization path used by corpus, positive Clippy and demos, requires both
+runtime and stdlib dependency demand, and verifies rejection with a second
+empty offline cache and with changed generated requirements under locked fetch.
+This certifies graph preparation/resolution, not compiler lint or whole-suite
+semantic outcomes. Policy tests cover prelude ordering, failure before offline
+activation, complete positive/companion selection, exact SHA namespace,
+stale/local identities, missing locks and lock mutation rejection.
+
+Execution environment: `CARGO_TARGET_DIR` unset, `CARGO_BUILD_JOBS=6`,
+`RUST_TEST_THREADS=1`; owned `TMPDIR`, `UV_CACHE_DIR`, and
+`PYTHONPYCACHEPREFIX` under the sibling owner root. Use
+`CARGO_PROFILE_DEV_DEBUG=0` and `CARGO_PROFILE_DEV_INCREMENTAL=false` to bound
+this fresh clone's build storage. No cold-cache performance claim.
+Candidate publication precedes remote exact-SHA checks. Raw logs and Opus
+response remain in sibling evidence; canonical JSON under own
+`target/verification/areas`. One initial Opus plus at most one remediation;
+no Sifr gates for these runner/helper/record-only categories. Original12K's
+consumed reviews and gates remain unchanged.
 
 ### Retained B9 terminal receipt (historical)
 
