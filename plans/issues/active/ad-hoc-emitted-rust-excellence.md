@@ -2,6 +2,138 @@
 
 Status: active
 
+## Current orchestration: replacement12K blocked; B10 then B11 (2026-09-07)
+
+This section supersedes older pending review/gate authorizations without erasing
+their evidence. Hooke is closed after the [terminal handoff](https://github.com/sifr-lang/sifr/pull/3717#issuecomment-5562687030).
+Original12K is approved, blocked and unmerged. Exact reviewed/gated candidate
+`822987be25dd99a1e98d0bf380c3355504a96f61`; pushed record
+`ed478dbcbc469d29aa56c8409ea4d35e6320824e`; assessed main
+`fc9dbf04727577e93dec397b3570d7cfe4af33d0`; corpus
+`8bcbe7ab7939e5c8362c10f61a80e368022cc372`. PR3717 and corpus48 are verified
+OPEN/draft/unmerged. Preserved clean checkout:
+`/private/tmp/sifr-item12k-replacement.1xatjh/sifr`, branch
+`codex/item12k-replacement-delivery`. Parent and all predecessor checkouts remain
+read-only to workers; each new worker owns a fresh independent clone/index/temp.
+
+The [remaining remediation review](https://github.com/sifr-lang/sifr/pull/3717#issuecomment-5562251011)
+was SATISFIED/no blockers. Authorized replacement merge gate FAILED, exit1 after
+4376.64s. Cumulative counts: one initial plus one remediation review, two provider
+requests, zero retries, two FAILED merge gates, zero passing/create-pr gates,
+zero integration/corpus merges. No third original12K review or gate is authorized.
+Session11171, qualifier88485, profile89101 and descendants are terminated.
+
+All13 guards plus Rust10/readiness4/core5/CPython2/Python30 (all five suites)/
+diagnostics184/runtime30 (three explicit policy skips)/algorithmic12/developer42
+passed. B7/B8/B9 are now verified cleared by the replacement gate. Generated
+quality completed nine variants: five passed, inventory/corpus/positive-Clippy/
+demos failed. Full E2E, migrated stdlib, normally ignored driver builds and later
+profile stages remain UNREACHED, not certified. The failures are inventory and
+dependency-resolution evidence, not established new emitted-Rust lint defects.
+
+Terminal ledger under the preserved checkout:
+`target/verification/areas/item12k-replacement-terminal.json`, SHA256
+`e1f2d5c158c05ca55690b1dbaf7f956e858669a669862e80cb1b073a847d5c65`.
+Final evidence SHA256
+`604bdec9161a70b23293f17d3f99916e70c16b02fd68546667407c3254c43c61`
+authenticates 60 current and 178 retained artifacts, 202 integration paths,
+32089 tracked entries and 16 exact submodules. Complete sibling `evidence/merge.log`
+SHA256 `bfa20fcd65ddb34a8d91ece1abad51bfac7c228007668f56c2985f3b4acd4b65`.
+Last worker resource observation: own target23GiB/free34GiB; preserve other caches.
+
+### Sequential bounded dependency registrations
+
+The user's standing authorization to close later items through workers applies
+to these bounded owners, not to another original12K qualification attempt.
+Execution order: **12K-B10, 12K-B11**, then an explicit delivery authorization
+checkpoint. After valid12K delivery, retain 12D,12E,12F,retained Item12,docs-only12A.
+One live implementer; parent does not implement, test, review or run Sifr gates.
+
+- **12K-B10 / [#3731](https://github.com/sifr-lang/sifr/issues/3731)**: in progress;
+  depends on terminal original12K evidence, not unmerged integration delivery.
+  Reconcile ERQ-032's stale current-source semantic anchor with its actual owning
+  implementation, preserving audit disposition and meaningful stale-anchor
+  rejection. No compiler behavior changes, suppressed checks, portability
+  claim without evidence, unrelated inventory changes or B11 repair. Inventory
+  and implementation match assessed main, so start from current main for a
+  narrow independently deliverable PR. Named validation, after implementation:
+  `python3 verification/areas/generated_code_quality/check_emitted_rust_audit_inventory.py`;
+  the same command with `--self-test`; `git diff --check`;
+  `python3 scripts/check_file_size_guardrails.py`. Register necessary focused
+  new regression commands before execution. Expected audit JSON/own records,
+  checker/tests only if necessary for this bounded mechanism. One exact-SHA
+  Opus review plus at most one remediation. No Sifr gates absent compiler,
+  lockfile, fixture or workflow changes. Merge and update owner/phase, then stop.
+- **12K-B11 / [#3732](https://github.com/sifr-lang/sifr/issues/3732)**: queued;
+  execution dependency B10 merged/terminal. Diagnose and fully correct preparation
+  of the actual exact-revision generated Cargo dependency graph before enforced
+  offline qualification. Workspace locked fetch alone did not populate the
+  generated self-Git graph. Preserve portable exact Git manifests, locked/offline
+  policy, independent owned caches and full coverage; no absolute-path substitute,
+  manually warmed shared-cache workaround, fallback, narrowed fixture manifest
+  or partial certification. Its worker must register exact focused setup-policy,
+  clean-cache exact-revision preparation/offline positive and negative checks
+  before executing them, plus diff/file-size checks. Do not rerun original12K's
+  gate or reset its reviews. Read issue3732 and preserved terminal evidence before
+  selecting this owner's exact implementation/validation paths.
+
+### Retained B9 terminal receipt (historical)
+
+12K-B9 Carson (`01a0787e-03d4-78e2-9e13-56c9b53be27a`) closed after
+verified [PR3729 merge](https://github.com/sifr-lang/sifr/pull/3729), candidate
+`36a3f111276eeade52628f2a5e3778d146d31695`, basea216019, normal merge
+`fc9dbf04727577e93dec397b3570d7cfe4af33d0`. All four named checks pass,
+file-size3757; one SATISFIED initial review, zero remediation/retries/gates,
+one provider request and one normal merge. Owner3724 closed. Only
+formatter_rules.md and phase Markdown changed; four row corrections address
+all eight reference checks. No source/manifests/checker/gitlink change.
+[Review/evidence](https://github.com/sifr-lang/sifr/pull/3729#issuecomment-5562147601),
+[terminal receipt](https://github.com/sifr-lang/sifr/pull/3729#issuecomment-5562162083).
+Preserved clean clone `/private/tmp/sifr-item12k-b9.YGbRNk/sifr`;
+post-merge phase record `4a4ba794de222569a108febf795224c19cd37309` on
+`codex/item12k-b9-formatter-reference` is pushed but not merged to main.
+It carries B8 closure; the next delivery owner must carry B9 closure. Sibling
+`evidence/terminal.json` SHA256
+`6f2b92857d693d198c8918c456115024df114f7751a29f36105ce4dfc2321f04`.
+No live B9 handles remain. All implementation workers are closed. Unrelated
+network HTTP body-preview spelling is later docs owner [#3730](https://github.com/sifr-lang/sifr/issues/3730),
+nonblocking with no established runtime defect or delivery dependency.
+
+### Item 12K-B10: current-source audit anchor reconciliation
+
+Owned checkout: `/private/tmp/sifr-item12k-b10.LrJOME/sifr`; branch
+`codex/item12k-b10-audit-anchor`. Actual main was fetched with
+`+refs/heads/main:refs/remotes/origin/main`; base is
+`fc9dbf04727577e93dec397b3570d7cfe4af33d0`. Parent and predecessor records,
+branches, indexes and caches remain read-only. This session owns only B10.
+
+ERQ-032's former `list.insert` conversion no longer exists. `lower_insert`
+calls `exact_int_to_bound_expr`, which emits `clamp_slice_bound` against the
+receiver length. The current semantic anchor is the renderer's nonliteral
+`RustExpr::Cast` branch selecting `usize` and emitting
+`::sifr_runtime::to_usize_proven`. Evidence now includes that renderer,
+`sifr_runtime::conversion` and `SifrInt::to_usize_proven_in_bounds`, whose
+invalid-proof paths panic. The row retains its confirmed, blocking,
+portability-owned disposition. This is an audit ownership correction, not
+proof of a new failing caller or certification of every index/capacity path.
+
+Only the ERQ-032 inventory row and this phase record change. The existing
+checker still requires current anchor text in an evidence-covered path; its
+named self-test rejects stale text and uncovered anchors. No checker extension
+or new regression command is needed. After implementation, run exactly:
+
+- `python3 verification/areas/generated_code_quality/check_emitted_rust_audit_inventory.py`
+- `python3 verification/areas/generated_code_quality/check_emitted_rust_audit_inventory.py --self-test`
+- `git diff --check`
+- `python3 scripts/check_file_size_guardrails.py`
+
+Validation and the single initial exact-SHA Opus review are pending. No prior
+B10 reviews, retries or gates exist. The user's file-category exception applies:
+audit JSON and phase Markdown require no create-pr or merge-profile gate.
+Original12K remains unmerged with two failed gates and no third allowance.
+B11 and all later implementation remain untouched. Stop after B10's normal
+merge and owner/phase closure record.
+
 ## Current orchestration: 12K blocked; bounded tooling owners (2026-09-06)
 
 This section supersedes older pending original12K review/gate statements, not
