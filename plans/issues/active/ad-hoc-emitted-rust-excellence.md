@@ -2,6 +2,60 @@
 
 Status: active
 
+## 12K-B11 terminal closure (2026-09-07)
+
+**12K-B11 is merged and closed.** Normal [PR3735](https://github.com/sifr-lang/sifr/pull/3735)
+merged candidate `2f3ec54226b2e722b3fe44ea59177f780865c921`, base
+`66363d81c8bc5256988b4cfea5d3b95b65c5caa2`, as main merge
+`e0806799c2b36c47069d6c435353f590f64b9559`. [Owner3732](https://github.com/sifr-lang/sifr/issues/3732)
+is CLOSED. [Exact-SHA review and validation](https://github.com/sifr-lang/sifr/pull/3735#issuecomment-5563015836)
+are published outside the reviewed Git tree.
+
+The production prelude prepares the actual portable generated manifest/lock
+graphs after workspace fetch and before offline execution. All five registered
+commands passed: 12 setup-policy checks, runner self-test, diff, file-size3759,
+and clean-cache qualification. All92 positive graphs fetched with `--locked`
+and resolved `--locked --offline`; runtime/stdlib demand and corpus/positive-
+Clippy/demo materialization paths covered. A second empty cache reproduced the
+exact-revision Git offline checkout failure; changed generated requirements
+failed specifically under `--locked`. Manifest/lock bytes stayed unchanged.
+The 1092.83-second clean-cache run is not host-sensitive performance evidence
+or a whole generated-Rust lint/compiler-suite certification.
+
+Eight implementation paths: this phase Markdown; generated-code-quality
+`generated_code_quality.py` and `source_quality_checks.py`; runner
+`cargo_setup.py`, `profile_runner.py`, `selftest.py`, `generated_cargo_setup.py`,
+and `generated_cargo_setup_checks.py`. No compiler, tracked lockfile, fixture,
+workflow, corpus manifest or gitlink change. No create-pr/merge gates apply.
+Counts: **1 initial SATISFIED Opus, 0 remediation, 1 provider request,
+0 retries, 0 failed named checks, 0 gates, 1 normal merge**.
+
+Owned clone `/private/tmp/sifr-item12k-b11.sasFlU/sifr`, branch
+`codex/item12k-b11-offline-preparation`. Canonical evidence under its
+`target/verification/areas`:
+
+- `item12k-b11-validation.json`: SHA256
+  `4c620ea6c1f4ca0e2443ed71d88a4f5054bac59820c941d49a37f764bbda2f14`.
+- `item12k-b11-clean-cache.json`: SHA256
+  `53d5a2a6a9115a680a6bb64e36b2a8fc611ecf7f499c01133d4cc4a63cf47475`.
+- `generated-cargo-setup-merge.json`: SHA256
+  `d8c6fa705cd9ffeafd471aa80954a4eba001d6e16ddec6a9a8e9157d2b48d347`.
+- Sibling `evidence/claude.5usGrH/response.md`: SHA256
+  `3b5bf4d44a1ffd92ac07064b40e178af6462eb0617b2a492ac61fbfd511e6f49`.
+
+Nonblocking review observations are [later3736](https://github.com/sifr-lang/sifr/issues/3736):
+measure preparation budgets, document candidate publication, adjudicate existing
+companion cleanup, and clarify helper environment ownership if its API expands.
+None is an established new mechanism defect or automatic delivery dependency.
+No follow-up implementation was started. Parent/predecessor trees and caches
+remain read-only. Own target4.4GiB/free28GiB at terminal observation; no live
+validation/review handles. Record-only update receives a diff check, no new
+external review or gate, and is pushed on the preserved branch after merge.
+
+**Blocker: none for B11. Stop.** Original12K remains approved but unmerged with
+its two failed gates and review caps unchanged. Its delivery checkpoint and
+all later emitted-code items remain outside this session.
+
 ## Current orchestration: replacement12K blocked; B10 then B11 (2026-09-07)
 
 This section supersedes older pending review/gate authorizations without erasing
@@ -64,7 +118,7 @@ One live implementer; parent does not implement, test, review or run Sifr gates.
   checker/tests only if necessary for this bounded mechanism. One exact-SHA
   Opus review plus at most one remediation. No Sifr gates absent compiler,
   lockfile, fixture or workflow changes. Merge and update owner/phase, then stop.
-- **12K-B11 / [#3732](https://github.com/sifr-lang/sifr/issues/3732)**: in progress;
+- **12K-B11 / [#3732](https://github.com/sifr-lang/sifr/issues/3732)**: merged;
   execution dependency B10 merged/terminal. Diagnose and fully correct preparation
   of the actual exact-revision generated Cargo dependency graph before enforced
   offline qualification. Workspace locked fetch alone did not populate the
